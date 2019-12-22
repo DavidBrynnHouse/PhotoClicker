@@ -2,13 +2,13 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { createAppContainer } from 'react-navigation';
 import {createStackNavigator}  from 'react-navigation-stack';
-import Home from './screens/Home'
-import Camera from './screens/Camera'
+import HomeScreen from './screens/HomeScreen'
+import CameraScreen from './screens/CameraScreen'
 
 const MainNavigator = createStackNavigator(
   {
-    Home: {screen: Home},
-    Camera: { screen: Camera}
+    HomeScreen: {screen: HomeScreen},
+    CameraScreen: { screen: CameraScreen}
   },
   {
     defaultNavigationOptions: {

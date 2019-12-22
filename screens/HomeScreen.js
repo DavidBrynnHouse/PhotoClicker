@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
-export default class Home extends React.Component{
+export default class HomeScreen extends React.Component{
 
     static navigationOptions = {
         title: "PhotoClicker"
@@ -8,7 +8,7 @@ export default class Home extends React.Component{
 
     render(){
 
-        let photo = this.props.navigation.getParam("Photo", "empty")
+        let photo = this.props.navigation.getParam("photo", "empty")
         const { navigate } = this.props.navigation;
         return (
             <View style={styles.container}>
@@ -23,7 +23,7 @@ export default class Home extends React.Component{
                 title="Take Photo"
                 style={styles.button}
                 onPress={()=>{
-                    this.props.navigation.navigate('Camera')
+                    this.props.navigation.navigate('CameraScreen')
                 }}
                 />
             </View>
@@ -40,7 +40,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     imageHolder: {
-        alignSelf: "center"
+        alignSelf: "center",
+        height: 500,
+        margin: 20
     },
     button: {
         margin: 20
